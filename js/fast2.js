@@ -34,15 +34,23 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
         request.open("post", url);
         request.send();
          //  replace
-            var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://bestonewaytaxis.com%0AContact No: 9994451282%0AHello "+strText+",%0AThank you for Booking with Best OneWay Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1);
+//            var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://bestonewaytaxis.com%0AContact No: 9994451282%0AHello "+strText+",%0AThank you for Booking with Best OneWay Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1);
 		//var wnd1=location.replace("bc.html","_self ");		      
-                              if(wnd){
-                                      setTimeout(function () { wnd.close();}, 1800);
+  //                            if(wnd){
+    //                                  setTimeout(function () { wnd.close();}, 1800);
 				      
-                              }
+      //                        }
+		
+		fetch("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://bestonewaytaxis.com%0AContact No: 9994451282%0AHello "+strText+",%0AThank you for Booking with Best OneWay Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1)
+			.then(response=>{
+			if(response.status==200)
+			{
+		
+		
 		//setTimeout(function () { wnd.open();}, 2100);
 		
-			window.open('bc.html', '_self');	
+			window.open('bc.html', '_self');
+			}
         }
 
 });
