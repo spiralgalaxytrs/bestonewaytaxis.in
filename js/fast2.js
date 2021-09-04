@@ -51,6 +51,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
 		
 			window.open('bc.html', '_self');
 			}
+			})
         }
 
 });
