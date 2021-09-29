@@ -32,6 +32,22 @@
 </style>
   <!-- Global site tag (gtag.js) - Google Ads: 368297874 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-368297874"></script>
+<!-- Event snippet for Website lead conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-331201295/hsAeCIWS-d8CEI_29p0B',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 
 </head>
@@ -262,11 +278,7 @@
                   </div>
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                  <button type="submit" class="btn btn__secondary btn__block " onclick="testVariable()" 
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-331201295/hsAeCIWS-d8CEI_29p0B'});
-</script>
->Submit Request</button>
+                  <button type="submit" class="btn btn__secondary btn__block " onclick="testVariable()" onclick="gtag_report_conversion()">Submit Request</button>
                   <div class="contact-result"></div>
                 </div><!-- /.col-lg-12 -->
               </div><!-- /.row -->
